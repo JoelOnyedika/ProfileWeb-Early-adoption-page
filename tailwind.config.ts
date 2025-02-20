@@ -25,6 +25,13 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        deep: {
+          blue: "#0A2540",
+          purple: "#5A3EBA",
+        },
+        neon: {
+          highlight: "#32D4A4",
+        },
         rich: {
           black: "#111111",
           gray: "#1f1f1f"
@@ -43,6 +50,14 @@ export default {
         sans: ["Inter", "sans-serif"],
       },
       keyframes: {
+        "glow": {
+          "0%, 100%": {
+            "box-shadow": "0 0 20px rgba(50, 212, 164, 0.3)",
+          },
+          "50%": {
+            "box-shadow": "0 0 30px rgba(50, 212, 164, 0.6)",
+          },
+        },
         "fade-up": {
           "0%": {
             opacity: "0",
@@ -63,6 +78,7 @@ export default {
         },
       },
       animation: {
+        "glow": "glow 2s ease-in-out infinite",
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
       },
